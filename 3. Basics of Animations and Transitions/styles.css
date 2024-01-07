@@ -14,6 +14,18 @@
 /* Todo 3.0: Create an animation that increases and decreases the scale of the box  */
 .todo-0-container .box{
     /* Apply animation here */
+    animation-name: scalingBoxAnimation;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes scalingBoxAnimation {
+    0% {
+        transform: scale(1)
+    }
+    50% {
+        transform: scale(1.5);
+    }
 }
 
 /* Todo 3.1: Create an animation that moves the box left and right.
@@ -21,15 +33,58 @@ Start with using "from" and "to". Now use "0%" and "100%" as your key frames.
 Set more key frames between 0% and 100%. */
 .todo-1-container .box{
     /* Apply animation here */
+    animation-name: movingBoxAnimation;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes movingBoxAnimation {
+    0% {
+        transform: translateX(0)
+    }
+    25%{
+        transform: translateX(10px);
+    }
+    50%{
+        transform: translateX(70px);
+    }
+    100% {
+        transform: translateX(200px);
+    }
 }
 
 /* Todo 3.2: Try the different timing funcitons such as linear, ease-in, ease-in-out, cubic-bezier, and steps*/
 .todo-2-container .box{
     /* Apply animation here */
+    animation-name: timingBoxAnimation;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes timingBoxAnimation {
+    0% {
+        transform: translateX(0)
+    }
+    25%{
+        transform: translateX(10px);
+    }
+    50%{
+        transform: translateX(70px);
+    }
+    100% {
+        transform: translateX(200px);
+    }
 }
 
 /* Todo 3.3: Create a transition that will raise the button up and will make it cast a shadow when you hover over the button */
 /* bonus: apply the transition on the box shadow with different duration and timing function. This should all be in one line*/
 .todo-3-container button{
     /* Apply transition here */
+    transition: transform 0.5s ease-in-out, box-shadow 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.todo-3-container button:hover{
+    transform: translateY(-5px);
+    box-shadow: 0px 5px 4px 0px black;
 }
