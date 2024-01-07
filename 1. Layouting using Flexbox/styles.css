@@ -39,66 +39,100 @@
 .todo-1-container {
   /* TODO 1.1.1 Set the display of this div to flex*/
   display: flex;
+  
   /* TODO 1.1.2 Set the flex direction to row. Then set it to column. What's the difference?*/
   flex-direction: column;
-  /* Answer: */
+  /* Answer: 
+  Setting the flex direction from row makes the main axis follow the x-axis, column changes it to y-axis.
+  */
+
   /* TODO 1.1.3 Set the flex direction to row. Then enable flex wrap. What does wrap do? */
   flex-direction: row;
   flex-wrap: wrap;
-  /* Answer: */
+  /* Answer:
+  Wrap makes so that if the screen is smaller than the size of all elements, the next elements will wrap to the next line.
+  */
+  
   /* Todo 1.1.4 Set the gap of the container to 10px. Now change it to 20px. What does gap do? */
-  gap: 200px;
-  /* Answer: */
+  gap: 20px;
+  /* Answer:
+  Gap controls the space between the items.
+  */
+
 }
 
 /* TODO 2 */
 .todo-2-container {
   /* TODO 1.2.1 Set the display to flex and flex direction to row */
   display: flex;
+  flex-direction: row;
+
   /* TODO 1.2.2 Justify the content to start, then end, then center. Make sure to see how the position of the divs change*/
+  justify-content: center;
+
   /* TODO 1.2.3 Align the items start, then end, then center. Make sure to see how the position of the divs change*/
+  align-items: center;
+
   /* TODO 1.2.4 Set the flex direction to column and play around with justify-content and align-items */
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
 }
 
 /* TODO 3 */
 .todo-3-container {
   /* Todo 1.3.1 Set the display to flex and align items center */
+  display: flex;
+  align-items: center;
 }
 
 /* Select the red box */
-.todo-3-container __ {
+.todo-3-container .box {
   /* Todo 1.3.2 Align this item to start. Try out the other possible values. What happens? */
-  /* Answer: */
+  align-self: flex-start;
+  /* Answer: 
+  Only this items with this specific class value will be affected.
+  */
 }
 
 /* Select the green box */
-.todo-3-container __ {
+.todo-3-container .box.tall {
   /* Todo 1.3.3 Set flex grow to 1 */
+  flex-grow: 1; 
 }
 
 /* Select the blue box */
-.todo-3-container __ {
+.todo-3-container .box.wide {
   /* Todo 1.3.4 Set flex grow to 2. Try out the other values. What happens? */
-  /* Answer: */
+  flex-grow: 2;
+  /* Answer: 
+  The box grows depending on the screen size based on the value provided.
+  */
 }
 
 /* TODO 4 */
 .todo-4-container {
   /* Set the display to flex */
+  display: flex;
 }
 
 /* Select the red box */
-.todo-4-container ___ {
+.todo-4-container .red {
   /* Set margin left to auto.  */
+  margin-left: auto;
 }
 
 /* Select the green box */
-.todo-4-container __ {
+.todo-4-container .green {
   /* Set margin right to auto */
+  margin-right: auto;
 }
 
 /* Select the blue box */
-.todo-4-container ___ {
+.todo-4-container .blue {
   /* Set the order to  1. Try chaging the order of the other divs. What does order do?*/
-  /* Answer: */
+  order: -1;
+  /* Answer: 
+  Order changes the order of when they appear.
+  */
 }
